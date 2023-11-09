@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  email_sender:
+    container_name: go_mailer
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - SMTP_USERNAME=
+      - SMTP_PASSWORD=
+      - SMTP_HOST=
+      - SMTP_PORT=
+      - SMTP_FROM_ADDRESS=
+      - BASIC_AUTH_USERNAME=
+      - BASIC_AUTH_PASSWORD=
+      - SMTP_FROM_NAME=
+    networks:
+      - backend
+networks:
+  backend:
+
+
+
