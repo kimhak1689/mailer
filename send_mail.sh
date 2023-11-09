@@ -1,0 +1,1 @@
+curl -X POST -u username:password -F "to_address=hankimhak451@gmail.com" -F "subject=Test Email" -F "body=This is a test email sent from Go." http://localhost:8080/send_email
