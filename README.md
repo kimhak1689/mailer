@@ -72,5 +72,9 @@ subject: Email subject
 body: Email content (HTML supported)
 ### Example
 ```
-curl -X -u username:password POST -F "to_address=recipient@example.com" -F "subject=Test Email" -F "body=This is a test email sent from Go." http://localhost:8080/send_email
+curl -X POST http://localhost:8080/send_email \
+-u username:password \
+-F "to_address=xxx@gmail.com" \
+-F "subject=Test Subject" \
+-F "body=This is a test email body."
 ```
